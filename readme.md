@@ -12,8 +12,8 @@ In Spark, the total time taken is 25 seconds, including kernel and Spark session
 
 ### Execution of .py modules in terminal
 ```bash
-C:\Users\XXXX\heapq_benchmark\x_largest_values_chunks.py 2 C:/Users/XXXX/heapq_benchmark/test_data.txt
-C:\Users\XXXX\heapq_benchmark\x_largest_values_nochunks.py 2 C:/Users/XXXX/heapq_benchmark/test_data.txt
+C:\Users\XXXX\heapq_benchmark\src\x_largest_values_chunks.py 2 C:/Users/XXXX/data/heapq_benchmark/test_data.txt
+C:\Users\XXXX\heapq_benchmark\src\x_largest_values_nochunks.py 2 C:/Users/XXXX/data/heapq_benchmark/test_data.txt
 
 ```
 ### Comments
