@@ -5,6 +5,7 @@ import logging
 import argparse
 import tempfile
 import os
+from datetime import datetime
 
 log_file = ''
 reject_file = ''
@@ -85,6 +86,7 @@ def find_top_X_records(file_path, X, chunksize=10000):
 
 def main():
     logging.info("Execution log start")
+    startlog = datetime.now()
     parser = argparse.ArgumentParser(description='Find top X identifiers based on their values.')
     parser.add_argument('X', type=int, help='Number of top values to retrieve')
     parser.add_argument('input_file', type=str, nargs='?', help='Path to the input file (optional, read from stdin if not provided)')
@@ -114,6 +116,9 @@ def main():
             logging.info(f"Successful: Top {X} identifiers:")
             for identifier in top_X_identifiers:
                 print(identifier)
+            endlog = datetime.now()
+            total_processing_time = endlog - startlog
+            print(f"Total Processing time : {total_processing_time}")
         else:
             logging.info(f"No top {X} identifiers found.")
             
